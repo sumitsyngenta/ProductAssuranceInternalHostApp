@@ -84,6 +84,7 @@ android {
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
         versionName "1.0"
+        missingDimensionStrategy 'react-native-camera', 'mlkit' // Or 'mlkit' if you need ML Kit features
     }
     signingConfigs {
         debug {
@@ -109,11 +110,15 @@ android {
 
 dependencies {
     // The version of react-native is set by the React Native Gradle Plugin
-    implementation("com.facebook.react:react-android")
+    implementation "com.facebook.react:react-native:+" 
+    
+    // Replace the webkit JSC with the React Native Community version
+    implementation "com.facebook.react:hermes-engine:+"
+    implementation "com.facebook.react:react-android"
 
     if (hermesEnabled.toBoolean()) {
         implementation("com.facebook.react:hermes-android")
     } else {
-        implementation jscFlavor
+        implementation("com.facebook.react:jsc-android:+")
     }
 }
