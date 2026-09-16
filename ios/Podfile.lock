@@ -1764,94 +1764,12 @@ PODS:
     - React-Core
   - react-native-geolocation-service (5.3.1):
     - React
-  - react-native-safe-area-context (5.6.1):
-    - boost
-    - DoubleConversion
-    - fast_float
-    - fmt
-    - glog
-    - hermes-engine
-    - RCT-Folly
-    - RCT-Folly/Fabric
-    - RCTRequired
-    - RCTTypeSafety
+  - react-native-safe-area-context (5.8.0):
     - React-Core
-    - React-debug
-    - React-Fabric
-    - React-featureflags
-    - React-graphics
-    - React-ImageManager
-    - React-jsi
-    - react-native-safe-area-context/common (= 5.6.1)
-    - react-native-safe-area-context/fabric (= 5.6.1)
-    - React-NativeModulesApple
-    - React-RCTFabric
-    - React-renderercss
-    - React-rendererdebug
-    - React-utils
-    - ReactCodegen
-    - ReactCommon/turbomodule/bridging
-    - ReactCommon/turbomodule/core
-    - SocketRocket
-    - Yoga
-  - react-native-safe-area-context/common (5.6.1):
-    - boost
-    - DoubleConversion
-    - fast_float
-    - fmt
-    - glog
-    - hermes-engine
-    - RCT-Folly
-    - RCT-Folly/Fabric
-    - RCTRequired
-    - RCTTypeSafety
-    - React-Core
-    - React-debug
-    - React-Fabric
-    - React-featureflags
-    - React-graphics
-    - React-ImageManager
-    - React-jsi
-    - React-NativeModulesApple
-    - React-RCTFabric
-    - React-renderercss
-    - React-rendererdebug
-    - React-utils
-    - ReactCodegen
-    - ReactCommon/turbomodule/bridging
-    - ReactCommon/turbomodule/core
-    - SocketRocket
-    - Yoga
-  - react-native-safe-area-context/fabric (5.6.1):
-    - boost
-    - DoubleConversion
-    - fast_float
-    - fmt
-    - glog
-    - hermes-engine
-    - RCT-Folly
-    - RCT-Folly/Fabric
-    - RCTRequired
-    - RCTTypeSafety
-    - React-Core
-    - React-debug
-    - React-Fabric
-    - React-featureflags
-    - React-graphics
-    - React-ImageManager
-    - React-jsi
-    - react-native-safe-area-context/common
-    - React-NativeModulesApple
-    - React-RCTFabric
-    - React-renderercss
-    - React-rendererdebug
-    - React-utils
-    - ReactCodegen
-    - ReactCommon/turbomodule/bridging
-    - ReactCommon/turbomodule/core
-    - SocketRocket
-    - Yoga
   - react-native-simple-toast (3.3.2):
+    - React-Core
+    - Toast (~> 4)
+  - react-native-webview (13.16.1):
     - boost
     - DoubleConversion
     - fast_float
@@ -1878,9 +1796,8 @@ PODS:
     - ReactCommon/turbomodule/bridging
     - ReactCommon/turbomodule/core
     - SocketRocket
-    - Toast (~> 4)
     - Yoga
-  - react-native-webview (13.16.0):
+  - react-native-worklets-core (1.6.3):
     - boost
     - DoubleConversion
     - fast_float
@@ -2415,9 +2332,11 @@ PODS:
     - SocketRocket
   - RNCAsyncStorage (1.12.1):
     - React-Core
+  - RNCPicker (2.11.4):
+    - React-Core
   - RNFS (2.20.0):
     - React-Core
-  - RNImageCropPicker (0.51.0):
+  - RNImageCropPicker (0.51.1):
     - boost
     - DoubleConversion
     - fast_float
@@ -2444,11 +2363,11 @@ PODS:
     - ReactCodegen
     - ReactCommon/turbomodule/bridging
     - ReactCommon/turbomodule/core
-    - RNImageCropPicker/QBImagePickerController (= 0.51.0)
+    - RNImageCropPicker/QBImagePickerController (= 0.51.1)
     - SocketRocket
-    - TOCropViewController (~> 2.7.4)
+    - TOCropViewController (~> 2.8.0)
     - Yoga
-  - RNImageCropPicker/QBImagePickerController (0.51.0):
+  - RNImageCropPicker/QBImagePickerController (0.51.1):
     - boost
     - DoubleConversion
     - fast_float
@@ -2476,67 +2395,11 @@ PODS:
     - ReactCommon/turbomodule/bridging
     - ReactCommon/turbomodule/core
     - SocketRocket
-    - TOCropViewController (~> 2.7.4)
+    - TOCropViewController (~> 2.8.0)
     - Yoga
-  - RNPermissions (5.4.2):
-    - boost
-    - DoubleConversion
-    - fast_float
-    - fmt
-    - glog
-    - hermes-engine
-    - RCT-Folly
-    - RCT-Folly/Fabric
-    - RCTRequired
-    - RCTTypeSafety
+  - RNPermissions (5.6.0):
     - React-Core
-    - React-debug
-    - React-Fabric
-    - React-featureflags
-    - React-graphics
-    - React-ImageManager
-    - React-jsi
-    - React-NativeModulesApple
-    - React-RCTFabric
-    - React-renderercss
-    - React-rendererdebug
-    - React-utils
-    - ReactCodegen
-    - ReactCommon/turbomodule/bridging
-    - ReactCommon/turbomodule/core
-    - SocketRocket
-    - Yoga
-  - RNScreens (4.16.0):
-    - boost
-    - DoubleConversion
-    - fast_float
-    - fmt
-    - glog
-    - hermes-engine
-    - RCT-Folly
-    - RCT-Folly/Fabric
-    - RCTRequired
-    - RCTTypeSafety
-    - React-Core
-    - React-debug
-    - React-Fabric
-    - React-featureflags
-    - React-graphics
-    - React-ImageManager
-    - React-jsi
-    - React-NativeModulesApple
-    - React-RCTFabric
-    - React-RCTImage
-    - React-renderercss
-    - React-rendererdebug
-    - React-utils
-    - ReactCodegen
-    - ReactCommon/turbomodule/bridging
-    - ReactCommon/turbomodule/core
-    - RNScreens/common (= 4.16.0)
-    - SocketRocket
-    - Yoga
-  - RNScreens/common (4.16.0):
+  - RNScreens (4.25.2):
     - boost
     - DoubleConversion
     - fast_float
@@ -2567,7 +2430,7 @@ PODS:
     - Yoga
   - SocketRocket (0.7.1)
   - Toast (4.1.1)
-  - TOCropViewController (2.7.4)
+  - TOCropViewController (2.8.0)
   - Yoga (0.0.0)
 
 DEPENDENCIES:
@@ -2618,6 +2481,7 @@ DEPENDENCIES:
   - react-native-safe-area-context (from `../node_modules/react-native-safe-area-context`)
   - react-native-simple-toast (from `../node_modules/react-native-simple-toast`)
   - react-native-webview (from `../node_modules/react-native-webview`)
+  - react-native-worklets-core (from `../node_modules/react-native-worklets-core`)
   - React-NativeModulesApple (from `../node_modules/react-native/ReactCommon/react/nativemodule/core/platform/ios`)
   - React-oscompat (from `../node_modules/react-native/ReactCommon/oscompat`)
   - React-perflogger (from `../node_modules/react-native/ReactCommon/reactperflogger`)
@@ -2649,6 +2513,7 @@ DEPENDENCIES:
   - ReactCodegen (from `build/generated/ios`)
   - ReactCommon/turbomodule/core (from `../node_modules/react-native/ReactCommon`)
   - "RNCAsyncStorage (from `../node_modules/@react-native-community/async-storage`)"
+  - "RNCPicker (from `../node_modules/@react-native-picker/picker`)"
   - RNFS (from `../node_modules/react-native-fs`)
   - RNImageCropPicker (from `../node_modules/react-native-image-crop-picker`)
   - RNPermissions (from `../node_modules/react-native-permissions`)
@@ -2758,6 +2623,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native-simple-toast"
   react-native-webview:
     :path: "../node_modules/react-native-webview"
+  react-native-worklets-core:
+    :path: "../node_modules/react-native-worklets-core"
   React-NativeModulesApple:
     :path: "../node_modules/react-native/ReactCommon/react/nativemodule/core/platform/ios"
   React-oscompat:
@@ -2820,6 +2687,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native/ReactCommon"
   RNCAsyncStorage:
     :path: "../node_modules/@react-native-community/async-storage"
+  RNCPicker:
+    :path: "../node_modules/@react-native-picker/picker"
   RNFS:
     :path: "../node_modules/react-native-fs"
   RNImageCropPicker:
@@ -2877,23 +2746,24 @@ SPEC CHECKSUMS:
   React-microtasksnativemodule: 1ead4fe154df3b1ba34b5a9e35ef3c4bdfa72ccb
   react-native-camera: 079d80421f0572d6b4e836908114d614d0adb553
   react-native-geolocation-service: 32b2c2a3b91e70ce2a8d0c684801aaeb0a07e0ec
-  react-native-safe-area-context: c6e2edd1c1da07bdce287fa9d9e60c5f7b514616
-  react-native-simple-toast: e3add86605446b2c4fb2f77884ef7040c36817d2
-  react-native-webview: 654f794a7686b47491cf43aa67f7f428bea00eed
+  react-native-safe-area-context: 700f3e707470d3cef056231541c77df29a5f0d9e
+  react-native-simple-toast: 4c9cc976cb92b6e5fb555e7c57fce38b90a56d07
+  react-native-webview: 39dc5eb2f6e31fbad4e3dcd4b61c73e294976e3c
+  react-native-worklets-core: a32b808f3b6fb93af6543ae5742292ff2392121f
   React-NativeModulesApple: eff2eba56030eb0d107b1642b8f853bc36a833ac
   React-oscompat: b12c633e9c00f1f99467b1e0e0b8038895dae436
   React-perflogger: 58d12c4e5df1403030c97b9c621375c312cca454
   React-performancetimeline: 0ee0a3236c77a4ee6d8a6189089e41e4003d292e
   React-RCTActionSheet: 3f741a3712653611a6bfc5abceb8260af9d0b218
   React-RCTAnimation: 408ad69ea136e99a463dd33eadecc29e586b3d72
-  React-RCTAppDelegate: f03b46e80b8a3dbfa84b35abfe123e02f3ceef83
+  React-RCTAppDelegate: 4d5bf77492e4801324f8602272ae5bc9cdcff524
   React-RCTBlob: bd42e92a00ad22eaab92ffe5c137e7a2f725887a
-  React-RCTFabric: b99ab638c73cf2d57b886eafdbfb2e4909b0eb9a
-  React-RCTFBReactNativeSpec: 7ad9aba0e0655e3f29be0a1c3fd4a888fab04dcf
+  React-RCTFabric: 66f3591e9c1625ebb710da39a2658420045be706
+  React-RCTFBReactNativeSpec: fe771b3d4429dd82df7cc32216e33075f5f4a7ad
   React-RCTImage: 0f1c74f7cd20027f8c34976a211b35d4263a0add
   React-RCTLinking: 6d7dfc3a74110df56c3a73cc7626bf4415656542
   React-RCTNetwork: 6a25d8645a80d5b86098675ca39bf8fcf1afa08b
-  React-RCTRuntime: 38bfe9766565ae3293ca230bc51c9c020a8bc98a
+  React-RCTRuntime: a1e7f9f012252ef5980719b319df360c8e96444c
   React-RCTSettings: 651d9ae2cdd32f547ad0d225a2c13886d6ad2358
   React-RCTText: 9bc66cd288478e23195e01f5cb45eba79986b2b4
   React-RCTVibration: 371226f5667a00c76d792dcdb5c2e0fcbcde0c3b
@@ -2911,15 +2781,16 @@ SPEC CHECKSUMS:
   ReactCodegen: 4d203eddf6f977caa324640a20f92e70408d648b
   ReactCommon: ce5d4226dfaf9d5dacbef57b4528819e39d3a120
   RNCAsyncStorage: 87d0d3d6193e79bd435e955f8998d2040aa60d67
+  RNCPicker: 7de564dce1f90b53e386a24001aafc3578233dfe
   RNFS: 89de7d7f4c0f6bafa05343c578f61118c8282ed8
-  RNImageCropPicker: 07691ec35bc874cf46b39d7710d82f63c9ca0817
-  RNPermissions: 56d8a958b1d8cf7f4c30a732619b7b6b6b92bfda
-  RNScreens: 0bbf16c074ae6bb1058a7bf2d1ae017f4306797c
+  RNImageCropPicker: e9fce555e5a604405399ce6cc268220c341b80e5
+  RNPermissions: a2d6f51197244abd81830d43b340182be12a23ce
+  RNScreens: 8260fbe566d21e3783b34da5daa9f9dbd4dd6dd0
   SocketRocket: d4aabe649be1e368d1318fdf28a022d714d65748
   Toast: 1f5ea13423a1e6674c4abdac5be53587ae481c4e
-  TOCropViewController: 80b8985ad794298fb69d3341de183f33d1853654
+  TOCropViewController: 797deaf39c90e6e9ddd848d88817f6b9a8a09888
   Yoga: 11c9686a21e2cd82a094a723649d9f4507200fb0
 
-PODFILE CHECKSUM: 9976e724cb606c0555e764f5405cc69ad14f868c
+PODFILE CHECKSUM: a60e42a1a52f5bc1101d9d2528879a8fcbedf93f
 
 COCOAPODS: 1.16.2

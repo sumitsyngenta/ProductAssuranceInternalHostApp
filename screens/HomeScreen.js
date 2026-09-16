@@ -4,6 +4,8 @@ import { ProudctAssuranceComponent, getHostAppData, setProductScanTranslations }
 import { useAuth } from './AuthContext';
 import sampleConfig from '../config/sample';
 import { Amplitude } from '@amplitude/react-native';
+import LogoutButton from './logoutBtn';
+
 const AMPLITUDE_KEY = '3f7592aa815db33dda046b052b39d527';
 const amplitudeInstance = Amplitude.getInstance();
 amplitudeInstance.init(AMPLITUDE_KEY).then(() => {
@@ -12,68 +14,73 @@ amplitudeInstance.init(AMPLITUDE_KEY).then(() => {
   console.error('Error initializing Amplitude:', error);
 });
 
-
-
 const HomeScreen = () => {
   const { state: {
-    phoneNumber,
-    otp,
-    isOtpSent,
-    verificationId,
-    loading,
-    countryCode,
-    language,
-    userData: {
-      token,
-      userProfile: {
-        firstName,
-        countryId,
-        lastName,
-        mobileNo,
-        id
-      },
-    }
-  } } = useAuth();
+    countryCode = '',
+    language = '',
+    userData = {}, 
+    appName,
+  } = {} } = useAuth();
+
+  // Safely access nested properties with default values
+  const userProfile = userData?.userProfile || {};
+  const firstName = userProfile?.firstName || '';
+  const lastName = userProfile?.lastName || '';
+  const mobileNo = userProfile?.mobileNo || '';
+  const id = userProfile?.id || '';
+  // use token from auth state if available, otherwise fall back to dummy
+  const token = userData?.token;
+
   const credentials = {
-    userName: `${firstName} ${lastName}`,
+    userName: `${firstName} ${lastName}`.trim(),
     userMail: mobileNo,
     role: {
-      RoleName: 'Grower',
-      RoleCode: 'GR'
+      RoleName: appName === 'Sumridhi' ? 'Sumridhi' : 'Grower',
+      RoleCode: appName === 'Sumridhi' ? 'SU' : 'GR',
     },
     id: id,
   };
+
   const productAssuranceObj = {
-    appName: `Grower${countryCode}`,
-    lat: sampleConfig?.latitude,
-    lng: sampleConfig?.longitude,
-    tokenValue: token,
+    appName: countryCode === `IN`? appName : `${appName}${countryCode || ''}`,
+    lat: sampleConfig?.latitude || 0,
+    lng: sampleConfig?.longitude || 0,
+    tokenValue: token || '',
     credentials,
-    country: countryCode,
-    language: language,
-    appVersion: sampleConfig.getAppVersion(),
+    country: countryCode || '',
+    language: (language !== 'vn' ? language : 'vi') || '',
+    appVersion: sampleConfig.getAppVersion() || '',
     isSalesForceUser: false,
     salesForceBaseURL: '',
-    environment: sampleConfig.ENV
+    environment: sampleConfig.ENV || '',
+    fonts:{}
   };
 
   const [hostDataSent, setHostDataSent] = useState(false);
 
   useEffect(() => {
-    getHostAppData(productAssuranceObj);
-    setProductScanTranslations(sampleConfig[language]);
-    amplitudeInstance.setUserId(firstName+mobileNo);
-    
-    setTimeout(() => {
-      setHostDataSent(true);
-    }, 200);
+    if (productAssuranceObj.tokenValue) {
+      getHostAppData(productAssuranceObj);
+      setProductScanTranslations(sampleConfig[language] || {});
+      if (firstName && mobileNo) {
+        amplitudeInstance.setUserId(firstName + mobileNo);
+      }
+      
+      setTimeout(() => {
+        setHostDataSent(true);
+      }, 200);
+    }
   }, []);
 
   return (
     <View style={styles.container}>
-      {hostDataSent && <ProudctAssuranceComponent 
-      hostAppData={productAssuranceObj}
-      closeProductAssurance={() => {}} />}
+      {hostDataSent && productAssuranceObj.tokenValue && (
+        <ProudctAssuranceComponent
+          hostAppData={productAssuranceObj}
+          closeProductAssurance={() => {}}
+        />
+      )}
+      <LogoutButton />
     </View>
   );
 };
@@ -81,7 +88,6 @@ const HomeScreen = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    // padding: 20,
   },
 });
 

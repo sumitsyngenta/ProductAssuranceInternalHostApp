@@ -1,0 +1,9 @@
+node_modules
+android/build
+ios/build
+*.log
+.vscode
+.DS_Store
+npm-debug.log
+yarn-error.log
+coverage

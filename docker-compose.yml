@@ -1,0 +1,14 @@
+version: '3.8'
+services:
+  metro:
+    build: .
+    volumes:
+      - ./:/usr/src/app:cached
+      - ./node_modules:/usr/src/app/node_modules:delegated
+    ports:
+      - "8081:8081"
+    environment:
+      - REACT_NATIVE_PACKAGER_HOSTNAME=host.docker.internal
+    command: yarn start --host 0.0.0.0 --port 8081
+    # For Linux physical device debugging, uncomment network_mode: "host"
+    # network_mode: "host"

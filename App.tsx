@@ -4,6 +4,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { AuthProvider, useAuth } from './screens/AuthContext';
 import LoginScreen from './screens/LoginScreen';
 import HomeScreen from './screens/HomeScreen';
+import AppChoiceScreen from './screens/AppChoiceScreen';
 import AsyncStorage from '@react-native-community/async-storage';
 import { ActivityIndicator, View } from 'react-native';
 
@@ -47,7 +48,12 @@ const AppNavigator = () => {
   }
 
   return (
-    <Stack.Navigator initialRouteName={isAuthenticated ? "Home" : "Login"}>
+    <Stack.Navigator initialRouteName={isAuthenticated ? "Home" : "AppChoice"}>
+      <Stack.Screen
+        name="AppChoice"
+        component={AppChoiceScreen}
+        options={{ headerShown: false }}
+      />
       <Stack.Screen 
         name="Login" 
         component={LoginScreen} 
